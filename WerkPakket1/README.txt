@@ -1,1 +1,0 @@
-Dit is de git van ons project van MonkeyBusiness.
