@@ -21,7 +21,7 @@ try {
     $eventJsonView = new EventJsonView();
     $eventController = new EventController($eventPDORepository, $eventJsonView);
 
-    $id = isset($_GET['id']) ? $_GET['id'] : null;
+
  /*   $router = new AltoRouter();
     $router->setBasePath('/api');
 
@@ -35,7 +35,12 @@ try {
         call_user_func_array( $match['target'], $match['params'] );
     }
 */
+    $id = isset($_GET['id']) ? $_GET['id'] : null;
     $eventController->handleFindEventById($id);
+    
+// deze bolt niet
+    $name = isset($_GET['name']) ? $_GET['name'] : null;
+    $eventController->handleFindEventByName($name);
 } catch (Exception $e) {
     echo $e;
 }
