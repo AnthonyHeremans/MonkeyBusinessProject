@@ -12,15 +12,39 @@ use model\EventRepository;
 use view\View;
 class EventController
 {
-    private $personRepository;
+    private $eventRepository;
     private $view;
 
-    public function __construct(PersonRepository $personRepository, View $view)
+    public function __construct(EventRepository $eventRepository, View $view)
     {
-        $this->personRepository = $personRepository;
+        $this->eventRepository = $eventRepository;
         $this->view = $view;
     }
 
-
-
+    public function handleFindEventById($id = null)
+    {
+        $event = $this->eventRepository->findEventById($id);
+        $this->view->show(['event' => $event]);
+    }
+    public function handleFindEventByName($name = null)
+    {
+        $event = $this->eventRepository->findEventByName($name);
+        $this->view->show(['event' => $event]);
+    }
+    /*public function handleFindAllEvents($name = null)
+    {
+        $event = $this->eventRepository->findEventByName($name);
+        $this->view->show(['event' => $event]);
+    }
+    public function handelAddEvent($name = null)
+    {
+        $event = $this->eventRepository->findEventByName($name);
+        $this->view->show(['event' => $event]);
+    }
+    public function handeRemoveEvent($name = null)
+    {
+        $event = $this->eventRepository->findEventByName($name);
+        $this->view->show(['event' => $event]);
+    }*/
+//$event = $this->eventRepository->findEventByName($name);
 }
