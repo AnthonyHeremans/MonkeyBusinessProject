@@ -12,7 +12,7 @@ namespace model;
 interface EventRepository
 {
 
-    public function findEventBytId($id);
+    public function findEventById($id);
     public function findEventByName($name);
     public function findAllEvents();
     public function addEvent(Event $event);
