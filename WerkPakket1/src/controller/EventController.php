@@ -12,6 +12,8 @@ use model\EventRepository;
 use view\View;
 class EventController
 {
+    private $personRepository;
+    private $view;
 
     public function __construct(PersonRepository $personRepository, View $view)
     {
@@ -19,6 +21,6 @@ class EventController
         $this->view = $view;
     }
 
-    private $personRepository;
-    private $view;
+
+
 }
