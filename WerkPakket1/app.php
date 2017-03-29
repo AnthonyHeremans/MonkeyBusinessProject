@@ -2,13 +2,13 @@
 
 // dit moet allemaal in de git ignore
 require_once 'src/autoload.php';
-/*use \model\PDOPersonRepository;
-use \view\PersonJsonView;
-use \controller\PersonController;
-*//*
+use \model\PDOEventRepository;
+use \view\EventJsonView;
+use \controller\EventController;
+
 $user = 'root';
 $password = '';
-$database = 'persondatabase';
+$database = 'monkeybusiness_wp1';
 $pdo = null;
 
 try {
@@ -17,13 +17,12 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE,
                        PDO::ERRMODE_EXCEPTION);
 
-    $personPDORepository = new PDOPersonRepository($pdo);
-    $personJsonView = new PersonJsonView();
-    $personController = new PersonController($personPDORepository, $personJsonView);
+    $eventPDORepository = new PDOEventRepository($pdo);
+    $eventJsonView = new EventJsonView();
+    $eventController = new EventController($eventPDORepository, $eventJsonView);
 
     $id = isset($_GET['id']) ? $_GET['id'] : null;
-    $personController->handleFindPersonById($id);
+    $eventController->handleFindEventById($id);
 } catch (Exception $e) {
     echo 'cannot connect to database';
 }
-*/
