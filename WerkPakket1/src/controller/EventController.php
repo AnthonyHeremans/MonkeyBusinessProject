@@ -31,6 +31,7 @@ class EventController
         $event = $this->eventRepository->findEventByName($name);
         $this->view->show(['event' => $event]);
     }
+}
     /*public function handleFindAllEvents($name = null)
     {
         $event = $this->eventRepository->findEventByName($name);
@@ -41,15 +42,5 @@ class EventController
         $event = $this->eventRepository->findEventByName($name);
         $this->view->show(['event' => $event]);
     }
-<<<<<<< HEAD
-   // remove on id
-    public function handelRemoveEvent($id = null)
-=======
-    public function handeRemoveEvent($name = null)
->>>>>>> parent of 2cc2ae8... sync
-    {
-        $event = $this->eventRepository->findEventByName($name);
-        $this->view->show(['event' => $event]);
-    }*/
-//$event = $this->eventRepository->findEventByName($name);
+}
 }
