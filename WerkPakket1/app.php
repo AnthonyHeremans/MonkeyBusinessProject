@@ -22,21 +22,12 @@ try {
     $eventJsonView = new EventJsonView();
     $eventController = new EventController($eventPDORepository, $eventJsonView);
 
-    $id = isset($_GET['id']) ? $_GET['id'] : null;
- /*   $router = new AltoRouter();
-    $router->setBasePath('/api');
 
-    $router->map('GET','/event/[i:id]',
-        function($id) use (&$eventController) {
-            $eventController->handleFindEventById($id);
-        }
-    );
-    $match = $router->match();
-    if( $match && is_callable( $match['target'] ) ){
-        call_user_func_array( $match['target'], $match['params'] );
-    }
-*/
+    $id = isset($_GET['id']) ? $_GET['id'] : null;
     $eventController->handleFindEventById($id);
+    
+
+
 } catch (Exception $e) {
     echo $e;
 }

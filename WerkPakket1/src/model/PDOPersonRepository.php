@@ -35,6 +35,7 @@ class PDOPersonRepository implements PersonRepository
             return null;
         }
     }
+<<<<<<< HEAD
 
 
     public function findPersonByFirstName($firstname)
@@ -61,4 +62,7 @@ class PDOPersonRepository implements PersonRepository
     {
         // TODO: Implement removeOnID() method.
     }
+=======
+}
+>>>>>>> parent of 267049d... sync
 }
