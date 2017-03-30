@@ -12,4 +12,9 @@ namespace model;
 interface PersonRepository
 {
     public function findPersonByID($id);
+    public function findPersonByFirstName($firstname);
+    public function findPersonByLastName($lastname);
+    public function addPerson(Person $person);
+    public function findAllPersons();
+    public function removeOnID($id);
 }
