@@ -8,7 +8,6 @@
  */
 namespace controller;
 
-use model\Event;
 use model\EventRepository;
 use view\View;
 class EventController
@@ -21,35 +20,36 @@ class EventController
         $this->eventRepository = $eventRepository;
         $this->view = $view;
     }
-// by id
+
     public function handleFindEventById($id = null)
     {
         $event = $this->eventRepository->findEventById($id);
         $this->view->show(['event' => $event]);
     }
-    //by name
     public function handleFindEventByName($name = null)
     {
         $event = $this->eventRepository->findEventByName($name);
         $this->view->show(['event' => $event]);
     }
-    // all
-    public function handleFindAllEvents()
+    /*public function handleFindAllEvents($name = null)
     {
-        $event = $this->eventRepository->findAllEvents();
+        $event = $this->eventRepository->findEventByName($name);
         $this->view->show(['event' => $event]);
     }
-    //add
-    public function handelAddEvent(Event $event)
+    public function handelAddEvent($name = null)
     {
-        $event = $this->eventRepository->addEvent($event);
+        $event = $this->eventRepository->findEventByName($name);
         $this->view->show(['event' => $event]);
     }
+<<<<<<< HEAD
    // remove on id
     public function handelRemoveEvent($id = null)
+=======
+    public function handeRemoveEvent($name = null)
+>>>>>>> parent of 2cc2ae8... sync
     {
-        $event = $this->eventRepository->removeOnId($id);
+        $event = $this->eventRepository->findEventByName($name);
         $this->view->show(['event' => $event]);
-    }
+    }*/
 //$event = $this->eventRepository->findEventByName($name);
 }
