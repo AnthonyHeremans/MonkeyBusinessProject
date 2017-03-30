@@ -46,7 +46,7 @@ class EventController
         $this->view->show(['event' => $event]);
     }
    // remove on id
-    public function handeRemoveEvent($id = null)
+    public function handelRemoveEvent($id = null)
     {
         $event = $this->eventRepository->removeOnId($id);
         $this->view->show(['event' => $event]);
