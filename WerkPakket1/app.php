@@ -22,9 +22,13 @@ try {
     $eventJsonView = new EventJsonView();
     $eventController = new EventController($eventPDORepository, $eventJsonView);
 
+   $name = isset($_GET['name']) ? $_GET['name'] : null;
+    $eventController->handleFindEventByName($name);
 
     $id = isset($_GET['id']) ? $_GET['id'] : null;
     $eventController->handleFindEventById($id);
+
+
     
 
 
