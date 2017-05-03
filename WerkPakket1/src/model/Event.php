@@ -13,17 +13,52 @@ class Event
 
     private $id;
     private $name;
-    private $date;
+    private $startDate;
+    private $endDate;
     private $location;
 
-    function __construct($id, $name, $date, $location)
+    function __construct($id, $name, $startDate, $endDate, $location)
     {
         $this->id = $id;
         $this->name = $name;
-        $this->date = $date;
+        $this->startDate = $startDate;
+        $this->endDate = $endDate;
         $this->location = $location;
 
     }
+
+    /**
+     * @return mixed
+     */
+    public function getStartDate()
+    {
+        return $this->startDate;
+    }
+
+    /**
+     * @param mixed $startDate
+     */
+    public function setStartDate($startDate)
+    {
+        $this->startDate = $startDate;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEndDate()
+    {
+        return $this->endDate;
+    }
+
+    /**
+     * @param mixed $endDate
+     */
+    public function setEndDate($endDate)
+    {
+        $this->endDate = $endDate;
+    }
+
 
 
     public function getId()
@@ -50,16 +85,7 @@ class Event
     }
 
 
-    public function getDate()
-    {
-        return $this->date;
-    }
 
-
-    public function setDate($date)
-    {
-        $this->date = $date;
-    }
 
 
     public function getLocation()

@@ -31,11 +31,12 @@ class EventController
         $event = $this->eventRepository->findEventByName($name);
         $this->view->show(['event' => $event]);
     }
-    /*public function handleFindAllEvents($name = null)
+    public function handleFindAllEvents()
     {
-        $event = $this->eventRepository->findEventByName($name);
-        $this->view->show(['event' => $event]);
+        $event = $this->eventRepository->findAllEvents();
+        $this->view->showAll(['event' => $event]);
     }
+    /*
     public function handelAddEvent($name = null)
     {
         $event = $this->eventRepository->findEventByName($name);
