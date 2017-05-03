@@ -21,7 +21,9 @@ class EventJsonView implements View
         if (isset($data['event'])) {
             $event = $data['event'];
             echo json_encode(['id' => $event->getId(), 'name' => $event->getName()
-                , 'startDate' => $event->getStartDate(), 'endDate' => $event->getEndDate(), 'location' => $event->getLocation()]);
+                , 'startDate' => $event->getStartDate(), 'endDate' => $event->getEndDate()
+                , 'location' => $event->getLocation()]
+                ,JSON_PRETTY_PRINT );
         } else {
             echo '{}';
         }

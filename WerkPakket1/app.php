@@ -53,7 +53,9 @@ try {
     $personController->handleFindPersonById($personId);
 
     //2datums
-
+    $startDate = isset($_GET['startDate']) ? $_GET['startDate'] : null;
+    $endDate = isset($_GET['endDate']) ? $_GET['endDate'] : null;
+    $eventController->handleEventBetweenTwoDates($startDate,$endDate);
 
 
 

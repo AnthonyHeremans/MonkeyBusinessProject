@@ -89,6 +89,12 @@ class PDOEventRepository implements EventRepository
         }
     }
 
+    public function findBetweenTwoDates($startDate, $endDate)
+    {
+        // TODO: Implement findBetweenTwoDates() method.
+
+    }
+
     public function addEvent(Event $event)
     {
         // TODO: Implement addEvent() method.

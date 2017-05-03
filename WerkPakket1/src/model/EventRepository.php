@@ -15,6 +15,7 @@ interface EventRepository
     public function findEventById($id);
     public function findEventByName($name);
     public function findAllEvents();
+    public function findBetweenTwoDates($startDate, $endDate);
     public function addEvent(Event $event);
     public function removeOnId($id);
 }
