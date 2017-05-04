@@ -18,7 +18,7 @@ class PDOPersonRepository implements PersonRepository
         $this->connection = $connection;
     }
 
-    public function findPersonById($id )
+    public function findPersonById($id)
     {
         try {
             $statement = $this->connection->prepare('SELECT * FROM person WHERE person_id=?');
@@ -27,7 +27,8 @@ class PDOPersonRepository implements PersonRepository
             $results = $statement->fetchAll(\PDO::FETCH_ASSOC);
 
             if (count($results) > 0) {
-                return new Person($results[0]['id'], $results[0]['firstname'], $results[0]['lastname'], $results[0]['event']);
+                return new Person($results[0]['person_id'], $results[0]['person_firstname'],
+                    $results[0]['person_lastname'], $results[0]['person_events']);
             } else {
                 return null;
             }
@@ -35,7 +36,7 @@ class PDOPersonRepository implements PersonRepository
             return null;
         }
     }
-<<<<<<< HEAD
+
 
 
     public function findPersonByFirstName($firstname)
@@ -62,7 +63,6 @@ class PDOPersonRepository implements PersonRepository
     {
         // TODO: Implement removeOnID() method.
     }
-=======
-}
->>>>>>> parent of 267049d... sync
+
+
 }

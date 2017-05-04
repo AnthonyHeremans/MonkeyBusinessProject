@@ -22,4 +22,9 @@ class PersonJsonView implements View
             echo '{}';
         }
     }
+
+    public function showAll(array $data)
+    {
+        // TODO: Implement showAll() method.
+    }
 }
