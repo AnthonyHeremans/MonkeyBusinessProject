@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage</title>
+</head>
+<body onload="loadPage()">
+<h1>Localstorage Example</h1>
+<input type="text" id="input">
+<button onclick="submitLocal()">Local Storage</button>
+<button onclick="clearLocal()">Clear Local Storage</button>
+<button onclick="submitSession()">Session Storage</button><br />
+<span>Local Storage: <span id="localResult"></span></span><br />
+<span>Session Storage: <span id="sessionResult"></span></span>
+
+<script>
+    function loadPage() {
+        var localString = localStorage.getItem("localValue");
+        var sessionString = sessionStorage.getItem("sessionValue");
+        if (localString != null) {
+            console.log("Resultstring is not null");
+            document.getElementById("localResult").innerHTML = localString;
+        } else {
+            console.log("Resultstring is null");
+            document.getElementById("localResult").innerHTML = "No local string entered";
+        }
+        if (sessionString != null) {
+            console.log("Sessionstring is not null");
+            document.getElementById("sessionResult").innerHTML = sessionString;
+        } else {
+            console.log("Sessionstring is null");
+            document.getElementById("sessionResult").innerHTML =  "No session string entered";
+        }
+    }
+    function submitLocal() {
+        console.log("Submit local");
+        localStorage.setItem("localValue", document.getElementById("input").value);
+        location.reload();
+    }
+    function submitSession() {
+        console.log("Submit session");
+        sessionStorage.setItem("sessionValue", document.getElementById("input").value);
+        location.reload();
+    }
+    function clearLocal() {
+        console.log("Clear Local");
+        localStorage.clear();
+        location.reload();
+    }
+</script>
+</body>
+</html>
