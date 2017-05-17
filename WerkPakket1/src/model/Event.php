@@ -22,7 +22,7 @@ class Event
         $this->id = $id;
         $this->name = $name;
         $this->startDate = $startDate;
-        $this->endDate = $endDate;
+       $this->endDate = $endDate;
         $this->location = $location;
 
     }
@@ -54,7 +54,7 @@ class Event
     /**
      * @param mixed $endDate
      */
-    public function setEndDate($endDate)
+   public function setEndDate($endDate)
     {
         $this->endDate = $endDate;
     }

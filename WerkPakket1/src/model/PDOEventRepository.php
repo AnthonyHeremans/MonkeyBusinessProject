@@ -91,7 +91,24 @@ class PDOEventRepository implements EventRepository
 
     public function findBetweenTwoDates($startDate, $endDate)
     {
-        // TODO: Implement findBetweenTwoDates() method.
+      /*  // TODO: Implement findBetweenTwoDates() method.
+        try {
+            $statement = $this->connection->prepare('SELECT * FROM event WHERE event_start_date BETWEEN ? AND ?');
+            $statement->bindParam(1, $name, \PDO::PARAM_STR);
+            $statement->execute();
+            $results = $statement->fetchAll(\PDO::FETCH_ASSOC);
+
+            if (count($results) > 0) {
+                return new Event($results[0]['event_id'], $results[0]['event_name']
+                    , $results[0]['event_start_date'], $results[0]['event_end_date'], $results[0]['event_location']);
+            } else {
+                return null;
+            }
+
+        }
+        catch (\Exception $exception) {
+            return null;
+        }*/
 
     }
 

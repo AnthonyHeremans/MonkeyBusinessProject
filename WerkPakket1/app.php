@@ -37,21 +37,22 @@ try {
 
 
     //?name=eerste%20event
-   $eventName = isset($_GET['eventName']) ? $_GET['eventName'] : null;
+   $eventName = isset($_REQUEST['eventName']) ? $_REQUEST['eventName'] : null;
     $eventController->handleFindEventByName($eventName);
 
     //?eventId=1
-    $eventId = isset($_GET['eventId']) ? $_GET['eventId'] : null;
+    $eventId = isset($_REQUEST['eventId']) ? $_REQUEST['eventId'] : null;
     $eventController->handleFindEventById($eventId);
 
     //altijd ( standaard url)
-    $allEvent = isset($_GET['allEvent'])? $_GET['allEvent'] : null;
+    $allEvent = isset($_REQUEST['allEvent'])? $_REQUEST['allEvent'] : null;
     $eventController->handleFindAllEvents();
 
     //?personId=1
-    $personId = isset($_GET['personId']) ? $_GET['personId'] : null;
+    $personId = isset($_REQUEST['personId']) ? $_REQUEST['personId'] : null;
     $personController->handleFindPersonById($personId);
 
+    //('matthias is een mosnterrrr');
     //2datums
     $startDate = isset($_GET['startDate']) ? $_GET['startDate'] : null;
     $endDate = isset($_GET['endDate']) ? $_GET['endDate'] : null;

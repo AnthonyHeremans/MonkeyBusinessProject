@@ -36,7 +36,7 @@ class EventController
         $event = $this->eventRepository->findAllEvents();
         $this->view->showAll(['event' => $event]);
     }
-    public function handleEventBetweenTwoDates($startDate, $endDate)
+    public function handleEventBetweenTwoDates($startDate = null, $endDate = null)
     {
         $event = $this->eventRepository->findBetweenTwoDates($startDate, $endDate);
         $this->view->showAll(['event' => $event]);
