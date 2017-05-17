@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
+  <component name="PublishConfigData">
+=======
   <component name="PublishConfigData" serverName="webserver">
+>>>>>>> 581e45b2f456c4d18e0339af247abb21e540d8d9
     <serverData>
       <paths name="webserver">
         <serverdata>
           <mappings>
+<<<<<<< HEAD
+            <mapping local="$PROJECT_DIR$" web="/" />
+=======
             <mapping deploy="public_html/monkeyBusiness/wp1" local="$PROJECT_DIR$" web="/monkeyBusiness/wp1" />
+>>>>>>> 581e45b2f456c4d18e0339af247abb21e540d8d9
           </mappings>
         </serverdata>
       </paths>
