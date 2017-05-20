@@ -14,6 +14,7 @@
 <span>Session Storage: <span id="sessionResult"></span></span>
 
 <script>
+    <!--Console logs added to ease troubleshooting-->
     function loadPage() {
         var localString = localStorage.getItem("localValue");
         var sessionString = sessionStorage.getItem("sessionValue");
@@ -43,10 +44,11 @@
         location.reload();
     }
     function clearLocal() {
-        console.log("Clear Local");
+        console.log("Clear local");
         localStorage.clear();
         location.reload();
     }
+
 </script>
 </body>
 </html>

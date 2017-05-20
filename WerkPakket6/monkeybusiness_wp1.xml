@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.6.5.2
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Gegenereerd op: 17 mei 2017 om 20:46
+- Serverversie: 10.1.21-MariaDB
+- PHP-versie: 5.6.30
+-->
+
+    <database name="monkeybusiness_wp1">
+        <!-- Tabel event -->
+        <table name="event">
+            <column name="event_id">1</column>
+            <column name="event_name">eerste event</column>
+            <column name="event_date">2017-03-29</column>
+            <column name="event_location">Hasselt</column>
+        </table>
+        <table name="event">
+            <column name="event_id">2</column>
+            <column name="event_name">tweede event</column>
+            <column name="event_date">2017-03-30</column>
+            <column name="event_location">Hasselt</column>
+        </table>
+        <table name="event">
+            <column name="event_id">3</column>
+            <column name="event_name">derde event</column>
+            <column name="event_date">2017-03-29</column>
+            <column name="event_location">Hasselt</column>
+        </table>
+        <table name="event">
+            <column name="event_id">4</column>
+            <column name="event_name">vierde event</column>
+            <column name="event_date">2017-03-30</column>
+            <column name="event_location">Hasselt</column>
+        </table>
+        <!-- Tabel person -->
+        <table name="person">
+            <column name="person_id">1</column>
+            <column name="person_firstname">Anthony</column>
+            <column name="person_lastname">Heremans</column>
+            <column name="person_events">1</column>
+        </table>
+        <table name="person">
+            <column name="person_id">2</column>
+            <column name="person_firstname">Bryan</column>
+            <column name="person_lastname">Deferm</column>
+            <column name="person_events">2</column>
+        </table>
+        <table name="person">
+            <column name="person_id">3</column>
+            <column name="person_firstname">Greg</column>
+            <column name="person_lastname">Blockx</column>
+            <column name="person_events">3</column>
+        </table>
+        <table name="person">
+            <column name="person_id">4</column>
+            <column name="person_firstname">Mathias</column>
+            <column name="person_lastname">Grauwels</column>
+            <column name="person_events">4</column>
+        </table>
+    </database>
+</pma_xml_export>
