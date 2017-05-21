@@ -1,0 +1,125 @@
+html, body {
+    background-color: #ccffff;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+}
+
+.topnav {
+    padding-top: 5px;
+    height: 30px;
+    background-color: #dbe6c4;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    height: 30px;
+    display: inline;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #636b6f;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.myButton {
+    width: 227px;
+    height: 30px;
+    margin-top: 10px;
+    -moz-box-shadow:inset 0px 1px 0px 0px #f2fadc;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #f2fadc;
+    box-shadow:inset 0px 1px 0px 0px #f2fadc;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dbe6c4), color-stop(1, #9ba892));
+    background:-moz-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+    background:-webkit-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+    background:-o-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+    background:-ms-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+    background:linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbe6c4', endColorstr='#9ba892',GradientType=0);
+    background-color:#dbe6c4;
+    border:1px solid #b2b8ad;
+    display:inline-block;
+    cursor:pointer;
+    color:#757d6f;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    padding:6px 12px;
+    text-decoration:none;
+}
+.myButton:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #9ba892), color-stop(1, #dbe6c4));
+    background:-moz-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
+    background:-webkit-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
+    background:-o-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
+    background:-ms-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
+    background:linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9ba892', endColorstr='#dbe6c4',GradientType=0);
+    background-color:#9ba892;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+.creators{
+    padding-top: 50px;
+   text-align: center;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
