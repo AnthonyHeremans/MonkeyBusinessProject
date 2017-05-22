@@ -36,32 +36,55 @@ try {
 
 
 
-    //?name=eerste%20event
+  /*  //?name=eerste%20event
    $eventName = isset($_REQUEST['eventName']) ? $_REQUEST['eventName'] : null;
     $eventController->handleFindEventByName($eventName);
-
+    echo($eventName);
     //?eventId=1
     $eventId = isset($_REQUEST['eventId']) ? $_REQUEST['eventId'] : null;
     $eventController->handleFindEventById($eventId);
 
+    /*var_dump($eventId);
     //altijd ( standaard url)
     $allEvent = isset($_REQUEST['allEvent'])? $_REQUEST['allEvent'] : null;
-    $eventController->handleFindAllEvents();
+    $eventController->handleFindAllEvents();*/
 
     //?personId=1
-    $personId = isset($_REQUEST['personId']) ? $_REQUEST['personId'] : null;
-    $personController->handleFindPersonById($personId);
+   // $personId = isset($_REQUEST['personId']) ? $_REQUEST['personId'] : null;
+  //  $personController->handleFindPersonById($personId);
 
-    //('matthias is een mosnterrrr');
+
     //2datums
-    $startDate = isset($_GET['startDate']) ? $_GET['startDate'] : null;
-    $endDate = isset($_GET['endDate']) ? $_GET['endDate'] : null;
-    $eventController->handleEventBetweenTwoDates($startDate,$endDate);
+    //?from=..&until=
+   // var_dump($_REQUEST);
+
+   /* //?startDate=2017/03/28&endDate=2017/03/30
+    $startDate = isset($_REQUEST['startDate']) ? $_REQUEST['startDate'] : null;
+    $endDate = isset($_REQUEST['endDate']) ? $_REQUEST['endDate'] : null;
+
+    echo($startDate);
+    echo($endDate);
+
+    $eventController->handleEventBetweenTwoDates($startDate, $endDate);*/
 
 
 
-    
+    //insert een event
+   // ?eventName=hey&startDate=2017/03/28&endDate=2017/03/30&location=whutwhut&personId=1
+    $eventName = isset($_REQUEST['eventName']) ? $_REQUEST['eventName'] : null;
+    $startDate = isset($_REQUEST['startDate']) ? $_REQUEST['startDate'] : null;
+    $endDate = isset($_REQUEST['endDate']) ? $_REQUEST['endDate'] : null;
+    $location = isset($_REQUEST['location']) ? $_REQUEST['location'] : null;
+    $personId = isset($_REQUEST['personId']) ? $_REQUEST['personId'] : null;
 
+    $event = new \model\Event();
+    $event->setName($eventName);
+    $event->setStartDate($startDate);
+    $event->setEndDate($endDate);
+    $event->setLocation($location);
+    $event->setPersonId($personId);
+
+    $eventController->handleEventAdd($event);
 
 } catch (Exception $e) {
     echo $e;
