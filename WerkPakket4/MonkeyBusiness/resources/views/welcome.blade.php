@@ -6,64 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>MonkeyBusiness Login</title>
-
-    <!-- Fonts -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../images/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="MonkeyBusiness"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="/public/css/app.css"/>
+    <link rel="stylesheet"  href="css/layout.css"/>
 
-    <!-- Styles -->
-    <style>
-        html, body {
-            background-color: #ccffff;
-            color: #636b6f;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 100;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-    </style>
 </head>
 <body>
 <div class="flex-center position-ref full-height">
@@ -74,7 +27,6 @@
 
     <div class="content">
         <div class="title m-b-md">
-            <img src = "/images/monkey.png" alt = "" />
             Monkey Business
         </div>
 
@@ -91,6 +43,10 @@
                 <label class=" col-md-5"> Password :</label>
                 <input class=" col-md-5" type="password" name="passwordBox"/>
             </div>
+
+            <form method="get" action="../resources/views/createEvent.html">
+                <button class="myButton" type="submit">Login</button>
+            </form>
 
         </div>
 
