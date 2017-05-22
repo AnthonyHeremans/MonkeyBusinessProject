@@ -19,4 +19,5 @@ interface EventRepository
     public function addEvent(Event $event);
     public function editEvent(Event $event);
     public function removeOnId($id);
+
 }

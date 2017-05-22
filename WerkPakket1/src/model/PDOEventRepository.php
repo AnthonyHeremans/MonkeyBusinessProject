@@ -143,21 +143,49 @@ class PDOEventRepository implements EventRepository
                 $statement->bindParam(5, $personid, \PDO::PARAM_STR);
                 $statement->execute();
 
-            }else{ echo "niet eringezet"; }
-           // $results = $statement->fetchAll(\PDO::FETCH_ASSOC);
+            }
+            else
+            {
+                echo "niet eringezet";
+            }
 
-            /*$arrayEvents = array();
+        }
+        catch (\Exception $exception) {
+            return null;
+        }
+    }
 
-            if (count($results) > 0) {
-                for ($x = 0; $x <= count($results) -1 ; $x++) {
-                    $arrayEvents[$x] =  new Event($results[$x]['event_id'], $results[$x]['event_name']
-                        , $results[$x]['event_start_date'], $results[$x]['event_end_date'], $results[$x]['event_location']
-                        , $results[0]['PersonId']);
-                }
-                return $arrayEvents;
-            } else {
-                return null;
-            }*/
+
+
+    public function editEvent(Event $event)
+    {
+        // TODO: Implement editEvent() method.
+
+        try {
+            $statement = $this->connection->prepare('UPDATE event SET event_name=? , event_start_date=?, event_end_date=?, event_location=?, PersonId=? WHERE event_id=? ');
+
+            // zwaar bealo da ik dit zo meot doen
+            $id = $event->getId();
+            $name = $event->getName();
+            $start = $event->getStartDate();
+            $end = $event->getEndDate();
+            $location = $event->getLocation();
+            $personid = $event->getPersonId();
+
+            if ( $id != null || $name != null || $start != null || $end != null || $location != null || $personid != null) {
+                $statement->bindParam(1, $name, \PDO::PARAM_STR);
+                $statement->bindParam(2, $start, \PDO::PARAM_STR);
+                $statement->bindParam(3, $end, \PDO::PARAM_STR);
+                $statement->bindParam(4, $location, \PDO::PARAM_STR);
+                $statement->bindParam(5, $personid, \PDO::PARAM_STR);
+                $statement->bindParam(6, $id, \PDO::PARAM_STR);
+                $statement->execute();
+
+            }
+            else
+            {
+                echo "vind user niet";
+            }
 
         }
         catch (\Exception $exception) {
@@ -168,10 +196,5 @@ class PDOEventRepository implements EventRepository
     public function removeOnId($id)
     {
         // TODO: Implement removeOnId() method.
-    }
-
-    public function editEvent(Event $event)
-    {
-        // TODO: Implement editEvent() method.
     }
 }

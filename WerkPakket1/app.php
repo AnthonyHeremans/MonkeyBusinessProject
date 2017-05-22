@@ -71,7 +71,7 @@ try {
 
     //insert een event
    // ?eventName=hey&startDate=2017/03/28&endDate=2017/03/30&location=whutwhut&personId=1
-    $eventName = isset($_REQUEST['eventName']) ? $_REQUEST['eventName'] : null;
+/*    $eventName = isset($_REQUEST['eventName']) ? $_REQUEST['eventName'] : null;
     $startDate = isset($_REQUEST['startDate']) ? $_REQUEST['startDate'] : null;
     $endDate = isset($_REQUEST['endDate']) ? $_REQUEST['endDate'] : null;
     $location = isset($_REQUEST['location']) ? $_REQUEST['location'] : null;
@@ -84,8 +84,27 @@ try {
     $event->setLocation($location);
     $event->setPersonId($personId);
 
-    $eventController->handleEventAdd($event);
+    $eventController->handleEventAdd($event);*/
 
+
+//update
+    //?eventId=5&eventName=umoeder3tene&startDate=2017/03/28&endDate=2017/03/30&location=whutwhut&personId=1
+   /* $eventid = isset($_REQUEST['eventId']) ? $_REQUEST['eventId'] : null;
+    $eventName = isset($_REQUEST['eventName']) ? $_REQUEST['eventName'] : null;
+    $startDate = isset($_REQUEST['startDate']) ? $_REQUEST['startDate'] : null;
+    $endDate = isset($_REQUEST['endDate']) ? $_REQUEST['endDate'] : null;
+    $location = isset($_REQUEST['location']) ? $_REQUEST['location'] : null;
+    $personId = isset($_REQUEST['personId']) ? $_REQUEST['personId'] : null;
+
+    $event = new \model\Event();
+    $event->setId($eventid);
+    $event->setName($eventName);
+    $event->setStartDate($startDate);
+    $event->setEndDate($endDate);
+    $event->setLocation($location);
+    $event->setPersonId($personId);
+
+    $eventController->handleEditEvent($event);*/
 } catch (Exception $e) {
     echo $e;
 }

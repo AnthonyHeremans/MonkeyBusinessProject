@@ -44,7 +44,12 @@ class EventController
     public function handleEventAdd($eventAdd = null)
     {
         $event = $this->eventRepository->addEvent($eventAdd);
-        $this->view->showAll(['event' => $event]);
+        //$this->view->showAll(['event' => $event]);
+    }
+    public function handleEditEvent($eventEdit = null)
+    {
+        $event = $this->eventRepository->editEvent($eventEdit);
+        //$this->view->showAll(['event' => $event]);
     }
 
     /*
