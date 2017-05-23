@@ -17,4 +17,10 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
     }
+
+    public function testEventsList()
+    {
+        $this->get(route('events'))
+            ->assertResponseOk();
+    }
 }
