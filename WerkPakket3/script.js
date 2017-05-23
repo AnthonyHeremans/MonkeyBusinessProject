@@ -2,7 +2,7 @@
  * Created by Mathias Grauwels.
  */
 function getId(id){
-    var url = "http://192.168.217.134/~user/monkey/api/events/";
+    var url = "http://192.168.126.134/~user/monkeyBusiness/wp1/";
     fetch(url + id, {
         method: 'GET'
     }).then(function (response) {
