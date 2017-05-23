@@ -9,9 +9,13 @@ use \view\EventJsonView;
 use \controller\EventController;
 use \controller\PersonController;
 
-$user = 'root';
-$password = 'vagrant';
-$database = 'monkeybusiness_wp1';
+$configFile = fopen(__DIR__."./database_config.json", "r") or die("Can't open JSON config file.");
+$config = json_decode(fread($configFile, filesize(__DIR__."./database_config.json")));
+
+
+$user = $config['user'];
+$password = $config['password'];
+$database = $config['database'];
 $pdo = null;
 
 try {
