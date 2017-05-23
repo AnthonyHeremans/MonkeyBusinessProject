@@ -1,0 +1,7 @@
+[
+  {
+    "database":"monkeybusiness_wp1",
+    "user": "root",
+    "password":"vagrant"
+  }
+]

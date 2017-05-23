@@ -16,15 +16,33 @@ class Event
     private $startDate;
     private $endDate;
     private $location;
+    private $personId;
 
-    function __construct($id, $name, $startDate, $endDate, $location)
+    /*function __construct( $id , $name, $startDate, $endDate, $location, $personId)
     {
         $this->id = $id;
         $this->name = $name;
         $this->startDate = $startDate;
        $this->endDate = $endDate;
         $this->location = $location;
+        $this->personId = $personId;
 
+    }*/
+    function __construct(){}
+    /**
+     * @return mixed
+     */
+    public function getPersonId()
+    {
+        return $this->personId;
+    }
+
+    /**
+     * @param mixed $personId
+     */
+    public function setPersonId($personId)
+    {
+        $this->personId = $personId;
     }
 
     /**

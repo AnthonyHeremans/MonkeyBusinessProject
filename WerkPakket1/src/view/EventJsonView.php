@@ -22,7 +22,7 @@ class EventJsonView implements View
             $event = $data['event'];
             echo json_encode(['id' => $event->getId(), 'name' => $event->getName()
                 , 'startDate' => $event->getStartDate(), 'endDate' => $event->getEndDate()
-                , 'location' => $event->getLocation()]
+                , 'location' => $event->getLocation(), 'personId' => $event->getPersonId()]
                 ,JSON_PRETTY_PRINT );
         } else {
             echo '{}';
@@ -43,7 +43,8 @@ class EventJsonView implements View
             foreach ($event as $e)
             {
                 $listJson[$i] =  ['id' => $e->getId(), 'name' => $e->getName()
-                    , 'startDate' => $e->getStartDate(), 'endDate' => $e->getEndDate(), 'location' => $e->getLocation()];
+                    , 'startDate' => $e->getStartDate(), 'endDate' => $e->getEndDate(), 'location' => $e->getLocation()
+               , 'personId' => $e->getPersonId()];
                 $i++;
             }
 
