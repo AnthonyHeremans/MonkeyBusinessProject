@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WerkPakket3</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<header>
+    <H2>MonkeyBusiness</H2>
+   <img src="aap.png" />
+</header>
+
+<div class="content">
+    <div class="module" id="events">
+        <H3>Zoeken</H3>
+        <p>Per afspraak: <input type="text" name="eventId" id="getID">
+        <button type="button" id="searchButton" onclick="getId(document.getElementById('getID').value)">Show</button></p>
+        <p>Op persoon: <input type="text" name="personId">
+        <button type="button">Show</button></p><br>
+        <h3>Resultaat</h3>
+        <div id="eventDiv"></div>
+        <br>
+        <button type="button" id="deleteButton" onclick="deleteID()">Delete</button>
+
+    </div>
+</div>
+
+</body>
+</html>
